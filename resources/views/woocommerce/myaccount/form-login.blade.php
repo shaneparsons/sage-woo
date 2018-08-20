@@ -32,7 +32,7 @@
                 {!! wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ) !!}
                 <div class="input-group flex-column">
                     <button type="submit" class="button" name="login"
-                            value="@php(esc_attr_e( 'Login', 'woocommerce' ))">
+                            value="@php esc_attr_e( 'Login', 'woocommerce' ); @endphp">
                         {{ __( 'Login', 'woocommerce' ) }}
                     </button>
                     <small class="input-group form-check form-check-inline mt-2">
@@ -89,7 +89,7 @@
                 <div class="form-group">
                     @php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ) @endphp
                     <button type="submit" class="btn btn-primary" name="register"
-                            value="@php(esc_attr_e( 'Register', 'woocommerce' ))">{{ __( 'Register', 'woocommerce' ) }}</button>
+                            value="@php esc_attr_e( 'Register', 'woocommerce' ); @endphp">{{ __( 'Register', 'woocommerce' ) }}</button>
                 </div>
                 @php do_action( 'woocommerce_register_form_end' ) @endphp
             </form>
