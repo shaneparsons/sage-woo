@@ -11,10 +11,9 @@
 			<label class="form-check-label" for="ship_to_different_address">
 				<span>{{ __( 'Ship to a different address?', 'woocommerce' ) }}</span>
 			</label>
-			<input id="ship-to-different-address-checkbox"
-				   class="form-check-input"
-				   @php(checked( apply_filters( 'woocommerce_ship_to_different_address_checked', 'shipping' === get_option( 'woocommerce_ship_to_destination' ) ? 1 : 0 ), 1 )) type="checkbox"
-				   name="ship_to_different_address" value="1"/>
+			<input id="ship-to-different-address-checkbox" class="form-check-input"
+        @php checked( apply_filters( 'woocommerce_ship_to_different_address_checked', 'shipping' === get_option( 'woocommerce_ship_to_destination' ) ? 1 : 0 ), 1 ) @endphp
+        type="checkbox" name="ship_to_different_address" value="1"/>
 		</div>
 
 		<div class="shipping_address">
