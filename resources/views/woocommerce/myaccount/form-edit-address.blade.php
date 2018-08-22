@@ -25,8 +25,9 @@
 
         @php do_action( "woocommerce_after_edit_address_form_{$load_address}" ) @endphp
 
-        <button type="submit" class="btn btn-primary" name="save_address"
-                value="@php(esc_attr_e( 'Save address', 'woocommerce' ))">{{ __( 'Save address', 'woocommerce' ) }}</button>
+        <button type="submit" class="btn btn-primary" name="save_address" value="@php esc_attr_e( 'Save address', 'woocommerce' ) @endphp">
+          {{ __( 'Save address', 'woocommerce' ) }}
+        </button>
         @php wp_nonce_field( 'woocommerce-edit_address' ) @endphp
         <input type="hidden" name="action" value="edit_address"/>
     </div>
